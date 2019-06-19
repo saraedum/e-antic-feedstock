@@ -16,12 +16,6 @@ build:
   string: {{ build_string }}
   # dependencies libflint and arb are not available for Windows on conda-forge
   skip: True  # [win]
-  # compiler(cxx) is clang4 on OSX which lacks some C++ features
-  skip: True  # [osx]
-  run_exports:
-  # e-antic uses semantic versioning https://github.com/videlec/e-antic/issues/12
-  - {{ pin_subpackage("e-antic") }}
-
 
 requirements:
   build:
@@ -37,6 +31,37 @@ requirements:
     - gmp
     - arb
     - libflint 2.5.*
+  run_exports:
+    # e-antic uses semantic versioning https://github.com/videlec/e-antic/issues/12
+    - {{ pin_subpackage("e-antic") }}
+
+outputs:
+  - name: e-antic
+  - name: pyeantic
+    build:
+      skip: True  # [win]
+    script: install-python.sh
+    requirements:
+      build:
+        - libtool
+        - automake
+        - {{ compiler('cxx') }}
+      host:
+        # E-ANTIC depends on antic; since antic has never been released officially
+        # (https://github.com/wbhart/antic/issues/31,) E-ANTIC ships the relevant
+        # parts of ANTIC.
+        # - antic
+        - boost-cpp
+        - gmp
+        - arb
+        - libflint 2.5.*
+      run:
+        - {{ pin_subpackage("e-antic") }}
+        # cppyy, not packaged in conda-forge yet
+    # We cannot test that theh import works since cppyy is not on conda-forge yet
+    #test:
+    #  imports:
+    #    - pyeantic
 
 test:
   commands:
