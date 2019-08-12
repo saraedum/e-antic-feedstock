@@ -16,6 +16,9 @@ build:
   string: {{ build_string }}
   # dependencies libflint and arb are not available for Windows on conda-forge
   skip: True  # [win]
+  run_exports:
+    # e-antic uses semantic versioning https://github.com/videlec/e-antic/issues/12
+    - {{ pin_subpackage("e-antic") }}
 
 requirements:
   build:
@@ -31,9 +34,6 @@ requirements:
     - gmp
     - arb
     - libflint 2.5.*
-  run_exports:
-    # e-antic uses semantic versioning https://github.com/videlec/e-antic/issues/12
-    - {{ pin_subpackage("e-antic") }}
 
 test:
   commands:
