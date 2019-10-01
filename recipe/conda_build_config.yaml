@@ -1,2 +1,4 @@
 channel_targets:
   - flatsurf main
+cxx_compiler_version:  # [osx]
+  - 9.0                # [osx]
