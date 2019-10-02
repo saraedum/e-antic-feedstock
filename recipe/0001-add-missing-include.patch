@@ -1,0 +1,24 @@
+From cb9e8364f5f2964345ba1fa85411b12aff16cb6a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Wed, 2 Oct 2019 10:01:51 +0200
+Subject: [PATCH] add missing include
+
+---
+ e-antic/renfxx_cereal.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/e-antic/renfxx_cereal.h b/e-antic/renfxx_cereal.h
+index 57cf622..3d5f9a2 100644
+--- a/e-antic/renfxx_cereal.h
++++ b/e-antic/renfxx_cereal.h
+@@ -13,6 +13,7 @@
+ #ifndef E_ANTIC_RENFXX_CEREAL_H
+ #define E_ANTIC_RENFXX_CEREAL_H
+ 
++#include <memory>
+ #include <cereal/cereal.hpp>
+ #include <cereal/types/memory.hpp>
+ #include <e-antic/renfxx.h>
+-- 
+2.23.0
+
