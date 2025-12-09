@@ -19,9 +19,9 @@ cxx_compiler_version:
 gmp:
 - '6'
 libboost_devel:
-- '1.86'
+- '1.88'
 libboost_headers:
-- '1.86'
+- '1.88'
 libeantic:
 - '2'
 libflint:
