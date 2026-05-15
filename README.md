@@ -62,10 +62,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_libflint3.3</td>
+              <td>linux_aarch64_libflint3.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6180&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e-antic-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_libflint3.3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e-antic-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_libflint3.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -90,10 +90,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_libflint3.3</td>
+              <td>linux_ppc64le_libflint3.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6180&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e-antic-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_libflint3.3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e-antic-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_libflint3.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
